@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Project 17</title>
+  <style>
+    html {margin:2em; font-family:Helvetica, Arial, sans-serif;}
+    h1 {margin:0;}
+    h2 {color:#369;}
+    .important {color:red;}
+	
+	
+    #reporter {
+	padding:0 1em; color:#fff; background-color:#000;
+	position: fixed;
+	bottom: 0%;
+	right: 0%;
+	}
+	
+	
+  </style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+<body>
+  <header><h1>Project 17</h1></header>
+  <div id="reporter">
+    <p>Window: <span class="width"></span>x<span class="height"></span></p>
+    <p>Window Scroll Top: <span class="scrolltop"></span></p>
+    <p>Important top offset: <span class="important-val"></span></p>
+  </div>
+  <h2>Instructions</h2>
+  <p>Download &ldquo;project17.html&rdquo; from &ldquo;Resources&rdquo; on Sakai. Write the jQuery to complete the following tasks without adding any additional html to the document:</p>
+	<ol>
+    <li>Style the #reporter div so it remains fixed in the bottom right corner of the screen</li>
+    <li>When the page loads, update the values of the window width, window height, window scroll top, and the top offset of the important paragraph</li>
+    <li>Whenever the browser window is resized, update the window width and height values</li>
+    <li>When the browser scrolls, update the window scrolltop value</li>
+    <li>Whenever the browser window is resized, update the value of the important paragraphs top offset</li>
+  </ol>
+  <h2>Filler Text</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim velit et lacus ultrices consequat. Mauris a tortor consequat, convallis urna sodales, mollis ante. Mauris porttitor a purus at viverra. Ut pellentesque fermentum turpis quis gravida. Mauris pretium elementum fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique scelerisque interdum. Morbi aliquet erat blandit sapien eleifend, eu suscipit orci auctor. Nulla ac magna in ante viverra venenatis sed ac ante. Integer quis ligula ut dolor pretium pulvinar. Cras aliquet consequat mi, ut placerat quam tristique eu. Vestibulum molestie nec nibh sodales eleifend. Mauris elementum at arcu sit amet molestie.</p>
+  <p>Aliquam vehicula convallis malesuada. Aliquam sagittis interdum sapien id interdum. Aenean lacus nisl, eleifend nec augue et, semper posuere mi. Cras ullamcorper tincidunt dapibus. Morbi mattis imperdiet condimentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam rutrum lacus ligula, quis congue nunc cursus non. Nunc lorem erat, ultrices in dignissim eget, eleifend ac est. Mauris fermentum, ante id tincidunt suscipit, ipsum risus consequat leo, ac scelerisque arcu quam non neque. In sollicitudin, elit ac fringilla condimentum, sapien libero tincidunt purus, et molestie sapien sapien a eros. Donec et malesuada metus, at lacinia felis. Praesent porttitor eget tellus tristique dignissim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec at arcu quis tortor elementum dignissim ut tincidunt nisl. Maecenas non pellentesque velit.</p>
+  <p class="important">Phasellus mattis magna pretium sapien dignissim, non ornare dolor interdum. Duis augue sapien, ultrices at dignissim vel, vehicula id eros. Quisque consequat dictum aliquet. Fusce est sem, sagittis eu imperdiet eget, accumsan a neque. Sed nec mauris sed ante iaculis auctor id eget augue. Maecenas bibendum eget ante a pharetra. Mauris lacinia tincidunt ipsum, a laoreet nunc placerat at. Curabitur ac rutrum ipsum. Suspendisse eros est, malesuada a adipiscing quis, consequat quis massa. Quisque aliquet, turpis nec consequat dapibus, erat magna commodo justo, ut porta dui arcu non sapien. Mauris fermentum sem ac commodo varius. Vivamus sagittis dolor eget augue ullamcorper, quis mattis metus tempor. Aliquam quis sem a libero adipiscing aliquam. Curabitur suscipit id eros interdum auctor. Ut posuere dui mi, ac pulvinar eros euismod ornare.</p>
+  <p>Donec a viverra diam, nec feugiat nisi. Phasellus laoreet convallis nisl eget malesuada. Aenean tempus eget leo a imperdiet. Nam commodo eros nec diam aliquam, nec laoreet elit dapibus. Sed non facilisis nisl, vel placerat lorem. Morbi lobortis dui non massa cursus euismod. Vivamus vehicula quis lacus sit amet cursus. Mauris dignissim laoreet leo, vitae varius nisi sollicitudin ut. Aenean at tortor neque. Donec gravida egestas augue nec egestas. Sed eget diam at nisl dignissim sagittis in sit amet nunc. Sed velit erat, mollis ut eros eu, tristique scelerisque lectus. Aenean mollis tellus justo, sed commodo turpis venenatis ut. Proin orci ipsum, tincidunt sed laoreet at, rhoncus et nunc.</p>
+  <p>Integer diam libero, varius sit amet leo vitae, tristique accumsan urna. Aliquam id justo nec sem vehicula porta at ac magna. Vestibulum condimentum semper nulla, ac tempor magna viverra sodales. Aenean vel nunc vitae est convallis placerat. Etiam luctus orci quis lorem elementum, sed pulvinar erat pharetra. Donec sed felis porttitor, dictum velit et, mattis sapien. Fusce facilisis tincidunt dapibus. Suspendisse porta, libero vel euismod cursus, lacus lectus mattis neque, sit amet hendrerit velit odio ac sem. Maecenas pulvinar dictum nisl. Integer dignissim id sem eget commodo. Morbi dictum id arcu vel viverra. Quisque posuere accumsan ante, quis dictum lacus euismod tristique. Donec pharetra velit vitae venenatis accumsan. Maecenas commodo pellentesque placerat. Proin ultricies mi at dui semper viverra.</p>
+  <p>Proin mauris nisi, facilisis sit amet enim non, auctor vulputate justo. Curabitur fringilla magna erat, eget commodo augue tempus id. Pellentesque et lacus elit. Pellentesque ultricies nibh eget ipsum facilisis interdum. Sed fringilla consequat elit ut tempus. Nullam felis eros, semper nec neque eu, rutrum molestie lorem. Sed tempus enim arcu, a venenatis metus cursus non. Aliquam ac lectus sapien. Nunc vitae fermentum diam, eu egestas augue. Proin arcu nulla, rutrum ut vehicula eu, egestas in lacus. Morbi hendrerit enim sed suscipit suscipit. Morbi porta leo at tellus tincidunt tristique. Praesent et pulvinar ligula, mattis porttitor nunc. Suspendisse imperdiet pharetra dignissim.</p>
+  <p>Nam hendrerit congue sem, sit amet laoreet dui ultricies non. Nam blandit metus est, eget pretium mauris varius et. Duis varius ipsum ac sapien pharetra sagittis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque risus turpis, dignissim nec ante id, tincidunt egestas enim. Aliquam aliquam nunc nec porttitor volutpat. Morbi tristique id arcu ut vulputate. Vestibulum ut lacinia quam. Vestibulum ultrices dapibus odio, sit amet ultrices arcu consequat vitae. Morbi velit felis, aliquam vel diam non, viverra ullamcorper nulla. Curabitur velit ligula, mollis quis ligula sit amet, aliquam molestie enim. Nulla a est sed dui porta pellentesque in gravida risus. Ut tempor, nunc non tincidunt cursus, tortor mauris sagittis ante, eu porta mi magna eu odio.</p>
+  <p>Nunc vitae sodales sem. Fusce interdum a urna sit amet rutrum. Nulla hendrerit purus lacus, volutpat semper turpis cursus eget. Nam gravida dui vel nibh rutrum aliquet. Cras quis est eget mi sagittis aliquam. Duis dictum consectetur orci, a gravida sem congue nec. Maecenas pretium dictum consectetur. Phasellus pharetra at mauris vitae blandit. Nunc ullamcorper mauris in convallis aliquam.</p>
+  <p>Nam aliquam, ante eu bibendum convallis, justo tortor luctus purus, id cursus quam turpis non elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit arcu vel nisl suscipit iaculis. Donec scelerisque mauris vel egestas ultrices. Vestibulum vel iaculis velit. Aliquam ligula orci, facilisis vitae nibh in, semper accumsan mi. Fusce facilisis lacinia ipsum, sit amet cursus ante venenatis eget. Donec turpis elit, eleifend ut porttitor in, ultrices sed odio. Nunc vitae metus turpis. Nunc interdum nec erat vitae molestie. Aliquam est est, sollicitudin in elit ac, cursus bibendum ipsum. Nulla feugiat orci a vestibulum bibendum. Donec pulvinar lacus leo.</p>
+  <p>Nam et fermentum turpis. Suspendisse sit amet hendrerit orci. Phasellus condimentum dolor et elit dapibus, aliquet suscipit lacus volutpat. Vestibulum tempor in elit aliquet pulvinar. Fusce rhoncus adipiscing risus, nec tincidunt lacus tincidunt eget. Vestibulum lorem nibh, ultricies ac pretium sit amet, ullamcorper nec mauris. In mattis at arcu eget varius.</p>
+  <p>Aliquam vehicula convallis malesuada. Aliquam sagittis interdum sapien id interdum. Aenean lacus nisl, eleifend nec augue et, semper posuere mi. Cras ullamcorper tincidunt dapibus. Morbi mattis imperdiet condimentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam rutrum lacus ligula, quis congue nunc cursus non. Nunc lorem erat, ultrices in dignissim eget, eleifend ac est. Mauris fermentum, ante id tincidunt suscipit, ipsum risus consequat leo, ac scelerisque arcu quam non neque. In sollicitudin, elit ac fringilla condimentum, sapien libero tincidunt purus, et molestie sapien sapien a eros. Donec et malesuada metus, at lacinia felis. Praesent porttitor eget tellus tristique dignissim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec at arcu quis tortor elementum dignissim ut tincidunt nisl. Maecenas non pellentesque velit.</p>
+  <p>Phasellus mattis magna pretium sapien dignissim, non ornare dolor interdum. Duis augue sapien, ultrices at dignissim vel, vehicula id eros. Quisque consequat dictum aliquet. Fusce est sem, sagittis eu imperdiet eget, accumsan a neque. Sed nec mauris sed ante iaculis auctor id eget augue. Maecenas bibendum eget ante a pharetra. Mauris lacinia tincidunt ipsum, a laoreet nunc placerat at. Curabitur ac rutrum ipsum. Suspendisse eros est, malesuada a adipiscing quis, consequat quis massa. Quisque aliquet, turpis nec consequat dapibus, erat magna commodo justo, ut porta dui arcu non sapien. Mauris fermentum sem ac commodo varius. Vivamus sagittis dolor eget augue ullamcorper, quis mattis metus tempor. Aliquam quis sem a libero adipiscing aliquam. Curabitur suscipit id eros interdum auctor. Ut posuere dui mi, ac pulvinar eros euismod ornare.</p>
+  <p>Donec a viverra diam, nec feugiat nisi. Phasellus laoreet convallis nisl eget malesuada. Aenean tempus eget leo a imperdiet. Nam commodo eros nec diam aliquam, nec laoreet elit dapibus. Sed non facilisis nisl, vel placerat lorem. Morbi lobortis dui non massa cursus euismod. Vivamus vehicula quis lacus sit amet cursus. Mauris dignissim laoreet leo, vitae varius nisi sollicitudin ut. Aenean at tortor neque. Donec gravida egestas augue nec egestas. Sed eget diam at nisl dignissim sagittis in sit amet nunc. Sed velit erat, mollis ut eros eu, tristique scelerisque lectus. Aenean mollis tellus justo, sed commodo turpis venenatis ut. Proin orci ipsum, tincidunt sed laoreet at, rhoncus et nunc.</p>
+
+  <script>
+  
+  $(window).on('load resize scroll', function(){
+  
+      $(".width").text($(window).width() );
+      $(".height").text($(window).height() );
+	  $(".scrolltop").text($(window).scrollTop() );
+	  $(".important-val").text($(".important").offset().top);
+    });
+
+	
+  </script>
+
+</body>
+</html>

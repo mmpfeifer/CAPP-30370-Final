@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="project11" content="project11">
+<title> Project 11</title>
+
+<style>
+
+	.firstdolphin:hover {
+		-webkit-transform:rotate(180deg);
+		}
+		
+	.seconddolphin:hover {
+		-webkit-transform:scale(1.5);
+		}
+	
+	.thirddolphin:hover {
+		-webkit-transform:skewX(20deg);
+		}
+		
+	
+		
+	.box1 {
+	width:160px;
+	height:160px;
+	background-color:orange;
+	box-shadow:6px 6px 6px 6px black;
+	
+	}
+	
+		
+	.box1:hover {
+	width:160px;
+	height:160px;
+	background-color:black;
+	box-shadow:6px 6px 6px 6px orange;
+	
+	-webkit-transition:background-color 2s ease;
+	-webkit-transition:box-shadow-color 2s ease;
+	}	
+	
+	.box2 {
+	width:160px;
+	height:160px;
+	background-color:blue;
+	
+	}
+	
+	.box2:hover {
+	width:168px;
+	height:168px;
+	background-color:blue;
+	
+	-webkit-transform:scale(1.05);
+	-webkit-transform:rotate(25deg);
+	-webkit-transform-origin:168px 0;
+	}
+	
+
+	
+	
+	
+</style>
+</head>
+
+
+
+<body>
+
+<img class="firstdolphin" src="dolphin1.jpg" alt="dolphin1">
+<br>
+<img class="seconddolphin" src="dolphin2.jpg" alt="dolphin2">
+<br>
+<img class="thirddolphin" src="dolphin3.jpg" alt="dolphin3">
+<br>
+
+
+<div class="box1"></div>
+<br>
+<div class="box2"></div>
+<br>
+<br>
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Project 16</title>
+  <style>
+    html {margin:2em; font-family:Helvetica, Arial, sans-serif;}
+    h1 {margin:0;}
+    h2 {color:#369;}
+  </style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+<body>
+  <header><h1>Project 16</h1></header>
+
+  <h2>Task One</h2>
+  <p>Colorize siblings: When one of the &quot;li&quot;&apos;s is clicked, update the text color of all li&apos;s to the color value of that &quot;li&quot;</p>
+  <ul id="colors">
+    <li>red</li>
+    <li>orange</li>
+    <li>yellow</li>
+    <li>green</li>
+    <li>blue</li>
+    <li>indigo</li>
+    <li>violet</li>
+  </ul>
+  <script>
+    var $colors = $('#colors').find('li');
+  $colors.on('click', function(){
+    $colors.css('color', $(this).text());
+  });
+  
+  </script>
+
+  <hr>
+
+  <h2>Task Two</h2>
+  <p>Add children: Add a new &quot;li&quot; with the input from the text box.</p>
+  <input type="text" id="li-text" placeholder="Text for the li"><button id="add-li">Add it!</button>
+  <ul id="add-li-list">
+    <li id="list">First item</li>
+  </ul>
+  <script>
+  
+  	$('#add-li').on("click", function () {
+		var $litext = $('#li-text');
+		$('#add-li-list').append('<li>' + $litext.val() + '</li>');
+		
+	});
+  </script>
+
+  <hr>
+
+  <h2>Task Three</h2>
+  <p id="task3">Parent update: When the <b>bold text in this paragraph</b> is clicked, make the entire paragraph bold. When the <i>italic text in this paragraph</i> is clicked, make the entire paragraph italic.</p>
+  <script>
+  
+  var $boldP = $('#task3').find('b');
+  $boldP.on("click", function () {
+	$('#task3').css({'font-weight':'bold'});
+	});
+  
+    var $italicP = $('#task3').find('i');
+  $italicP.on("click", function () {
+	$('#task3').css({'font-style':'italic'});
+	});
+  </script>
+
+  <hr>
+
+  <h2>Task Four</h2>
+  <p id="task4">Every time the button below is clicked, add an X to the end of this paragraph (before the closing &lt;/p&gt; tag).</p><br>
+  <button id="button-task4">Add an X!</button>
+  <script>
+  
+	$('#button-task4').on("click", function () {
+		$('#task4').append('X')
+	
+	});
+  
+  </script>
+
+  <hr>
+
+  <h2>Task Five</h2>
+  <p>When one of the items on the list below is clicked, log the text to the console and make that item &quot;bold&quot;.</p>
+  <ul id="task5">
+    <li>Holmes</li>
+    <li>Watson</li>
+    <li>Adler</li>
+    <li>Moriarty</li>
+    <li>Lestrade</li>
+  </ul>
+  <script>
+  
+  var $sherlock = $('#task5').find('li');
+  $sherlock.on('click', function () {
+	$(this).css({'font-weight':'bold'});
+	console.log($(this).text());
+	
+	});
+  
+  
+  </script>
+
+</body>
+</html>

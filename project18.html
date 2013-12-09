@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Project 18</title>
+  <style>
+    html {margin:2em; font-family:Helvetica, Arial, sans-serif;}
+    h1 {margin:0;}
+    h2 {color:#369;}
+
+    nav ul {margin:0; padding:0; list-style:none;}
+      nav li {display:inline-block;}
+      nav li a {display:block; padding:1em; color:#ccc; text-decoration:none; background-color:gray;}
+      .tabs-sections {padding:0 1em; border:1px solid gray;}
+      .active a {color:#000; background-color:lightgray;}
+      .s2, .s3 {display:none;}
+
+    hr {margin:2em 0;}
+
+    .box {width:100px; height:100px; padding:2em; border:1px solid black; background-color:#069;}
+  </style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+<body>
+  <header><h1>Project 18</h1></header>
+
+  <h2>Tab Switching</h2>
+  <p>Add the jQuery so that when a nav item is clicked 1) it becomes the active nav item and 2) the content below switches to show the correct section. NOTE: the page should not try and anchor link down to the target section.
+
+  <div class="tabs">
+    <nav>
+      <ul>
+        <li class="active"><a href="#one">One</a></li>
+        <li><a href="#two">Two</a></li>
+        <li><a href="#three">Three</a></li>
+      </ul>
+    </nav>
+
+    <div class="tabs-sections">
+      <section id="one" class="s s1">
+        <h2>Section One</h2>
+        <p>Lorem ipsum dolor sit amet, <b>consectetur adipisicing elit</b>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <i>quis nostrud exercitation ullamco</i> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </section>
+      <section id="two" class="s s2">
+        <h2>Section Two</h2>
+        <p>Lorem ipsum dolor sit amet, <b>consectetur adipisicing elit</b>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <i>quis nostrud exercitation ullamco</i> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </section>
+      <section id="three" class="s s3">
+        <h2>Section Three</h2>
+        <p>Lorem ipsum dolor sit amet, <b>consectetur adipisicing elit</b>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <i>quis nostrud exercitation ullamco</i> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </section>
+    </div>
+  </div>
+
+  <script>
+  
+   $('ul').on('click', "a", function(e){
+	/*1. Set the class on the parent li of what's clicked
+	2. remove the class on that li's siblings
+	3. Get the href of the clicked link to show the related section
+	4. Get the siblings of that section and hide them */
+		e.preventDefault();
+		$(this).parent().addClass('active').siblings().removeClass("active");
+			var target = $(this).attr('href');
+				$(target).show().siblings().hide();
+			
+		
+ 
+  });
+  
+
+  </script>
+
+  <hr>
+
+  <h2>Box Effects</h2>
+  <p>Add the jQuery to accomplish the following effects in 1.5 seconds when the box is clicked:</p>
+  <ol>
+    <li>Increase the width and height to 300px each</li>
+    <li>Increase the font size to 44px</li>
+    <li>Increase the border radius to 30px</li>
+  </ol>
+  <div class="box">I am a box.</div>
+
+  <script>
+      $(".box" ).on('click', function() {
+      $( this ).animate({
+        width: "300px",
+		height: "300px",
+        'font-size': "44px",
+        borderRadius: "30px"
+         }, 1500 );
+    });
+    </script>
+
+  </script>
+
+</body>
+</html>

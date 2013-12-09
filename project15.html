@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Project 15</title>
+  <style>
+    html {margin:1em; font-family:Helvetica, Arial, sans-serif;}
+    h2 {clear:both;}
+    .box {width:200px; height:200px; border:1px solid #000; background-color:#ddd;}
+  </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+<body>
+  <header><h1>Project 15</h1></header>
+
+  <h2>Source and Target</h2>
+  <h3>Source</h3>
+  <input type="text" id="text1" placeholder="Type here">
+  <h3>Target</h3>
+  <input type="text" id="text2" readonly="true" placeholder="Echo the result here">
+  <script>
+
+	$('#text1').on('keyup', function () {
+		var input = $('#text1').val();
+		$('#text2').val(input);
+		
+	});
+  </script>
+
+  <hr>
+
+  <h2>Image Swap</h2>
+  <img id="kitten" src="http://placekitten.com/g/300/200" title="A kitten" alt="A kitten"><br>
+  <input type="text" id="get-img" placeholder="Enter image url here">
+  <button id="update-img">Update</button>
+  <script>
+
+	$('#update-img').on("click", function () {
+		var imageUrl = $('#get-img');
+		var $kitten = $('#kitten');
+		$kitten.attr('src', imageUrl.val());
+		});
+		
+  </script>
+
+  <hr>
+
+  <h2>Font Sizer</h2>
+  <p id="to-style">This is my paragraph of stuff.</p><br>
+  <input type="text" id="font-size" placeholder="Enter a font size">
+  <button id="font-button">Make it so</button>
+  <script>
+
+	var $paragraph = $('#to-style');
+	$('#font-button').on("click", function() {
+		
+		var setSize = $('#font-size');
+		$paragraph.css("#font-size", val() + "px");
+		});
+	
+	
+  </script>
+
+  <hr>
+
+  <h2>Attribute Reporter</h2>
+  <img id="kitten2" src="http://placekitten.com/g/300/200" title="A kitten" alt="A kitten"><br>
+  <button id="get-attr">Log Attributes</button>
+  <script>
+  
+    $('#get-attr').on("click", function(){
+    var input = $('#kitten2');
+    console.log(input.attr('src'));
+    console.log(input.attr('alt'));
+	});
+
+  </script>
+
+  <hr>
+
+  <h2>Element Counter</h2>
+  <input type="text" id="qsa" placeholder="Which element?"><br>
+  <button id="count">Count the Elements</button>
+  <input type="text" id="element-count" placeholder="Results here" readonly="true">
+  <script>
+  
+	$('#count').on("click", function () {
+		var val = $('#qsa').val();
+		var count = $(val).length;
+		$('#element-count').val(count);
+	});
+
+  </script>
+
+
+</body>
+</html>
