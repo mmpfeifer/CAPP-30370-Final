@@ -1,0 +1,101 @@
+body {
+	background-color: #CCFF99;
+	background-image: url(backgroundimage.jpg);
+	background-repeat: repeat-y;
+	font-family: Georgia, Times, serif;
+} 
+
+h1 {
+	font-family: Snell, "Monotype Corsiva", Georgia, Times, serif;
+	font-weight: bold;
+}
+
+h2 {
+	font-weight: normal;
+}
+
+.header {
+	text-align: center;
+}
+
+.navigation {
+	float:left;
+}
+
+ul li a {
+	display: block;
+	list-style: none;
+	background-color: white;
+	opacity: .5;
+	width: 100px;
+	text-align: center;
+	padding: 20px 10px;
+	margin-bottom: 20px;
+	border-radius: 6px; 
+	overflow: hidden;
+	
+}
+
+a:link {
+	color: black;
+}
+
+a:visited {
+	color: maroon;
+}
+
+a:hover {
+	color: gold;
+}
+
+@media only screen and (min-width:1000px) {
+img {
+	display: block;
+	float: left;
+}
+
+main {
+	padding: 0;
+	margin: 0;
+	float: left;
+	overflow: hidden;
+}
+
+#wineglass1 {
+	display:block;
+	margin-left: 60px;
+	border-radius: 12px;
+	padding: 60px;
+	clear: left;
+	overflow: hidden;
+}
+
+#wineglass2 {
+	display:block;
+	margin-left: 40px;
+	border-radius: 12px;
+	padding: 60px;
+	overflow: hidden;
+}
+
+#wineglass3 {
+	display:block;
+	margin-left: 40px;
+	border-radius: 12px;
+	padding: 60px;
+	overflow: hidden;
+}
+
+.addinspiration {
+	display:block;
+	margin: 20px;
+	padding: 10px;
+	overflow:hidden;
+	clear:left;}
+}
+
+
+
+footer {
+	clear:both;
+	}
