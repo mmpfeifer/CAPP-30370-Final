@@ -1,28 +1,30 @@
-
-function getWidth() {
-    if (self.innerWidth) {
-       return self.innerWidth;
-    }
-    else if (document.documentElement && document.documentElement.clientHeight){
-        return document.documentElement.clientWidth;
-    }
-    else if (document.body) {
-        return document.body.clientWidth;
-    }
-    return 0;
-}
-console.log('Browser Width:  ' + self.innerWidth);
-
-/*$('img').click(function(){
-	console.log($(this).attr('alt'));
-	console.log($(this).attr(width));
-	console.log($(this).attr(height));
+$('img').click(function(){
+	console.log('Img alt:  ' + $(this).attr('alt'));
+	console.log('Img Width:  ' + $(this).width());
+	console.log('Img Height: ' + $(this).height());
 	});
-*/
 
-var img = new Image();
-img.onclick = function() {
-  console.log('Image Width:  ' + this.width + 'x' + 'Image Height:  ' + this.height + 'Image Alt:  ' + this.alt);
-}
+$('h1, h2, h3, h4, h5, h6').click(function(){
+	console.log('Header Text: ' + $(this).text());
+	console.log('Header Color: ' + $(this).css('color'));
+	console.log('Header Size: ' + $(this).css('fontSize'));
+
+	});
+
+ $('#add-li').on("click", function () {
+		var $litext = $('#li-text');
+		$('#add-li-list').append('<li>' + $litext.val() + '</li>');
+		
+	});
+
+ $(window).on("load resize", function(){
+      console.log( 'Width: ' + $(window).width() );
+          });
 
 
+
+
+
+
+
+	

@@ -75,7 +75,12 @@ img {
 	max-width:100%;
 	}
 
-
+#addinspiration {
+	display: block;
+	float: left;
+	overflow: hidden;
+	clear: left;
+}
 
 }
 
